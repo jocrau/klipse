@@ -12,9 +12,10 @@
   (-> (!> js/Babel.transform src #js {:presets #js ["react"]})
       (aget "code")))
 
-(defn eval-jsx [exp _]
+(defn eval-jsx [exp {:keys [container-id]}]
   (go
     (try
+      (aset js/window "klipse_container" (js/document.getElementById container-id))
       (-> exp
           babel
           eval-in-global-scope)
