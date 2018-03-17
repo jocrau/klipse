@@ -1,22 +1,22 @@
 (defproject klipse "7.3.2"
   :description "Embeddable multi-language WEB REPL"
-  :dependencies [[org.clojure/clojure "1.9.0-alpha14"]
-                 [org.clojure/clojurescript "1.9.456"]
-                 [org.clojure/core.async "0.2.395"]
-                 [binaryage/devtools "0.8.2"]
+  :dependencies [[org.clojure/clojure "1.9.0"]
+                 [org.clojure/clojurescript "1.10.191"]
+                 [org.clojure/core.async "0.4.474"]
+                 [binaryage/devtools "0.9.9"]
                  [im.chit/purnam "0.5.2"]
                  [viebel/codemirror-parinfer "0.0.3"]
                  [cljsjs/markdown "0.6.0-beta1-0"]
-                 [cljs-http "0.1.42"]
-                 [viebel/gadjett "0.3.4"]
+                 [cljs-http "0.1.44"]
+                 [viebel/gadjett "0.5.2"]
                  [org.omcljs/om "1.0.0-alpha47"]
                  [com.cemerick/url "0.1.1"]
-                 [rewrite-cljs "0.4.3"]
-                 [cljsjs/codemirror "5.19.0-0"]
-                 [devcards "0.2.2"]
+                 [rewrite-cljs "0.4.4"]
+                 [cljsjs/codemirror "5.31.0-0"]
+                 [devcards "0.2.4"]
                  [devcards-om-next "0.3.0"]]
-  :profiles {:dev {:dependencies [[figwheel-sidecar "0.5.9"]
-                                  [com.cemerick/piggieback "0.2.1"]] }}
+  :profiles {:dev {:dependencies [[figwheel-sidecar "0.5.15"]
+                                  [com.cemerick/piggieback "0.2.2"]] }}
   :jvm-opts ["-Xms356M" "-Xmx1G"]
   :clean-targets ^{:protect false} ["resources/public/dev/js"
                                     "resources/public/plugin_prod/js"
